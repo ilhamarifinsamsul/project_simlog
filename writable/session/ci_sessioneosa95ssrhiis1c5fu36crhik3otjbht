@@ -1,0 +1,10 @@
+__ci_last_regenerate|i:1706160520;_ci_previous_url|s:54:"http://localhost:8080/index.php/pengajuanview/list/new";urlFlash|N;id_user|s:1:"1";username|s:5:"staff";id_role|s:1:"1";iconFlash|s:7:"warning";__ci_vars|a:5:{s:9:"iconFlash";s:3:"old";s:10:"titleFlash";s:3:"old";s:9:"textFlash";s:3:"old";s:13:"_ci_old_input";s:3:"old";s:21:"_ci_validation_errors";s:3:"old";}titleFlash|s:7:"Warning";textFlash|s:245:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>keterangan_barang Tidak boleh kosong</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:4:{s:14:"csrf_test_name";s:32:"e19f423162a3eb4ab36ddad219a9d2c4";s:17:"keterangan_barang";s:34:"
+                                ";s:12:"nama_pengaju";s:8:"Rohayati";s:7:"tanggal";s:10:"2024-01-25";}}_ci_validation_errors|a:1:{s:17:"keterangan_barang";s:36:"keterangan_barang Tidak boleh kosong";}

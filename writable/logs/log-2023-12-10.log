@@ -1,0 +1,266 @@
+INFO - 2023-12-10 04:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-10 04:41:35 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`project_simlog`.`tb_pengeluaran`, CONSTRAINT `tb_pengeluaran_ibfk_1` FOREIGN KEY (`id_pengeluaran`) REFERENCES `tb_barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\project-simlog\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\project-simlog\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\project-simlog\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\project-simlog\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\project-simlog\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\project-simlog\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\project-simlog\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\project-simlog\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\project-simlog\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\project-simlog\app\Controllers\PengeluaranLogistik.php(151): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\project-simlog\system\CodeIgniter.php(934): App\Controllers\PengeluaranLogistik->create()
+#10 C:\xampp\htdocs\project-simlog\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengeluaranLogistik))
+#11 C:\xampp\htdocs\project-simlog\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\project-simlog\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\project-simlog\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-12-10 04:41:35 --> Cannot add or update a child row: a foreign key constraint fails (`project_simlog`.`tb_pengeluaran`, CONSTRAINT `tb_pengeluaran_ibfk_1` FOREIGN KEY (`id_pengeluaran`) REFERENCES `tb_barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_pengeluaran` (`id_barang`, `id_kategori`, `jumlah`, `id_satuan`, `tanggal`, `nama_penerima`, `alamat`, `jenis_bencana`, `keterangan`, `gambar`, `created_at`, `updated_at`) VALUES (\'1\', \'1\', \'5\', \'1\', \'2023-12-10\', \'Fahrul\', \'Subang\', \'Rumah Roboh\', \'Tersalurkan\', \'1702183295_6b26ec7bdd66b4ffd7da.png\', \'2023-12-10 04:41:35\', \'2023-12-10 04:41:35\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_pengeluaran` (`id_barang`, `id_kategori`, `jumlah`, `id_satuan`, `tanggal`, `nama_penerima`, `alamat`, `jenis_bencana`, `keterangan`, `gambar`, `created_at`, `updated_at`) VALUES (\'1\', \'1\', \'5\', \'1\', \'2023-12-10\', \'Fahrul\', \'Subang\', \'Rumah Roboh\', \'Tersalurkan\', \'1702183295_6b26ec7bdd66b4ffd7da.png\', \'2023-12-10 04:41:35\', \'2023-12-10 04:41:35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_pengeluaran` (`id_barang`, `id_kategori`, `jumlah`, `id_satuan`, `tanggal`, `nama_penerima`, `alamat`, `jenis_bencana`, `keterangan`, `gambar`, `created_at`, `updated_at`) VALUES (\'1\', \'1\', \'5\', \'1\', \'2023-12-10\', \'Fahrul\', \'Subang\', \'Rumah Roboh\', \'Tersalurkan\', \'1702183295_6b26ec7bdd66b4ffd7da.png\', \'2023-12-10 04:41:35\', \'2023-12-10 04:41:35\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_pengeluaran` (`id_barang`, `id_kategori`, `jumlah`, `id_satuan`, `tanggal`, `nama_penerima`, `alamat`, `jenis_bencana`, `keterangan`, `gambar`, `created_at`, `updated_at`) VALUES (:id_barang:, :id_kategori:, :jumlah:, :id_satuan:, :tanggal:, :nama_penerima:, :alamat:, :jenis_bencana:, :keterangan:, :gambar:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\PengeluaranLogistik.php(151): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PengeluaranLogistik->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengeluaranLogistik))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-simlog\\public\\index.php')
+INFO - 2023-12-10 04:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-10 04:46:23 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`project_simlog`.`tb_pengeluaran`, CONSTRAINT `tb_pengeluaran_ibfk_1` FOREIGN KEY (`id_pengeluaran`) REFERENCES `tb_barang` (`id_barang`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\project-simlog\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\project-simlog\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\project-simlog\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\project-simlog\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\project-simlog\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\project-simlog\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\project-simlog\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\project-simlog\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\project-simlog\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\project-simlog\app\Controllers\PengeluaranLogistik.php(151): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\project-simlog\system\CodeIgniter.php(934): App\Controllers\PengeluaranLogistik->create()
+#10 C:\xampp\htdocs\project-simlog\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengeluaranLogistik))
+#11 C:\xampp\htdocs\project-simlog\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\project-simlog\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\project-simlog\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-12-10 04:46:23 --> Cannot add or update a child row: a foreign key constraint fails (`project_simlog`.`tb_pengeluaran`, CONSTRAINT `tb_pengeluaran_ibfk_1` FOREIGN KEY (`id_pengeluaran`) REFERENCES `tb_barang` (`id_barang`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_pengeluaran` (`id_barang`, `id_kategori`, `jumlah`, `id_satuan`, `tanggal`, `nama_penerima`, `alamat`, `jenis_bencana`, `keterangan`, `gambar`, `created_at`, `updated_at`) VALUES (\'1\', \'1\', \'5\', \'1\', \'2023-12-10\', \'Fahrul\', \'Subang\', \'Rumah Roboh\', \'Tersalurkan\', \'1702183583_7db72a1dbc16649f0778.png\', \'2023-12-10 04:46:23\', \'2023-12-10 04:46:23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_pengeluaran` (`id_barang`, `id_kategori`, `jumlah`, `id_satuan`, `tanggal`, `nama_penerima`, `alamat`, `jenis_bencana`, `keterangan`, `gambar`, `created_at`, `updated_at`) VALUES (\'1\', \'1\', \'5\', \'1\', \'2023-12-10\', \'Fahrul\', \'Subang\', \'Rumah Roboh\', \'Tersalurkan\', \'1702183583_7db72a1dbc16649f0778.png\', \'2023-12-10 04:46:23\', \'2023-12-10 04:46:23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_pengeluaran` (`id_barang`, `id_kategori`, `jumlah`, `id_satuan`, `tanggal`, `nama_penerima`, `alamat`, `jenis_bencana`, `keterangan`, `gambar`, `created_at`, `updated_at`) VALUES (\'1\', \'1\', \'5\', \'1\', \'2023-12-10\', \'Fahrul\', \'Subang\', \'Rumah Roboh\', \'Tersalurkan\', \'1702183583_7db72a1dbc16649f0778.png\', \'2023-12-10 04:46:23\', \'2023-12-10 04:46:23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_pengeluaran` (`id_barang`, `id_kategori`, `jumlah`, `id_satuan`, `tanggal`, `nama_penerima`, `alamat`, `jenis_bencana`, `keterangan`, `gambar`, `created_at`, `updated_at`) VALUES (:id_barang:, :id_kategori:, :jumlah:, :id_satuan:, :tanggal:, :nama_penerima:, :alamat:, :jenis_bencana:, :keterangan:, :gambar:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\PengeluaranLogistik.php(151): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PengeluaranLogistik->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengeluaranLogistik))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-simlog\\public\\index.php')
+INFO - 2023-12-10 04:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-10 04:48:27 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`project_simlog`.`tb_penerimaan`, CONSTRAINT `tb_penerimaan_ibfk_1` FOREIGN KEY (`id_penerimaan`) REFERENCES `tb_barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\project-simlog\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\project-simlog\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\project-simlog\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\project-simlog\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\project-simlog\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\project-simlog\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\project-simlog\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\project-simlog\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\project-simlog\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\project-simlog\app\Controllers\PenerimaanLogistik.php(111): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\project-simlog\system\CodeIgniter.php(934): App\Controllers\PenerimaanLogistik->create()
+#10 C:\xampp\htdocs\project-simlog\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenerimaanLogistik))
+#11 C:\xampp\htdocs\project-simlog\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\project-simlog\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\project-simlog\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-12-10 04:48:27 --> Cannot add or update a child row: a foreign key constraint fails (`project_simlog`.`tb_penerimaan`, CONSTRAINT `tb_penerimaan_ibfk_1` FOREIGN KEY (`id_penerimaan`) REFERENCES `tb_barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_penerimaan` (`id_barang`, `id_kategori`, `jumlah`, `id_satuan`, `tanggal`, `created_at`, `updated_at`) VALUES (\'1\', \'1\', \'10\', \'1\', \'2023-12-10\', \'2023-12-10 04:48:27\', \'2023-12-10 04:48:27\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_penerimaan` (`id_barang`, `id_kategori`, `jumlah`, `id_satuan`, `tanggal`, `created_at`, `updated_at`) VALUES (\'1\', \'1\', \'10\', \'1\', \'2023-12-10\', \'2023-12-10 04:48:27\', \'2023-12-10 04:48:27\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_penerimaan` (`id_barang`, `id_kategori`, `jumlah`, `id_satuan`, `tanggal`, `created_at`, `updated_at`) VALUES (\'1\', \'1\', \'10\', \'1\', \'2023-12-10\', \'2023-12-10 04:48:27\', \'2023-12-10 04:48:27\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_penerimaan` (`id_barang`, `id_kategori`, `jumlah`, `id_satuan`, `tanggal`, `created_at`, `updated_at`) VALUES (:id_barang:, :id_kategori:, :jumlah:, :id_satuan:, :tanggal:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\PenerimaanLogistik.php(111): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PenerimaanLogistik->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenerimaanLogistik))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-simlog\\public\\index.php')
+INFO - 2023-12-10 04:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:50:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:50:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:59:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 04:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 05:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-10 10:50:22 --> mysqli_sql_exception: Duplicate column name 'jenis_bencana' in C:\xampp\htdocs\project-simlog\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\project-simlog\system\Database\MySQLi\Connection.php(295): mysqli->query('ALTER TABLE `tb...', 0)
+#1 C:\xampp\htdocs\project-simlog\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `tb...')
+#2 C:\xampp\htdocs\project-simlog\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `tb...')
+#3 C:\xampp\htdocs\project-simlog\system\Database\Forge.php(745): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `tb...')
+#4 C:\xampp\htdocs\project-simlog\app\Database\Migrations\2023-10-26-011210_AddJenisBencanaPengeluaran.php(11): CodeIgniter\Database\Forge->addColumn('tb_pengeluaran', Array)
+#5 C:\xampp\htdocs\project-simlog\system\Database\MigrationRunner.php(877): App\Database\Migrations\AddJenisBencanaPengeluaran->up()
+#6 C:\xampp\htdocs\project-simlog\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\project-simlog\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\project-simlog\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\project-simlog\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\project-simlog\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-12-10 10:51:30 --> mysqli_sql_exception: Duplicate column name 'jenis_bencana' in C:\xampp\htdocs\project-simlog\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\project-simlog\system\Database\MySQLi\Connection.php(295): mysqli->query('ALTER TABLE `tb...', 0)
+#1 C:\xampp\htdocs\project-simlog\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `tb...')
+#2 C:\xampp\htdocs\project-simlog\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `tb...')
+#3 C:\xampp\htdocs\project-simlog\system\Database\Forge.php(745): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `tb...')
+#4 C:\xampp\htdocs\project-simlog\app\Database\Migrations\2023-10-26-011210_AddJenisBencanaPengeluaran.php(11): CodeIgniter\Database\Forge->addColumn('tb_pengeluaran', Array)
+#5 C:\xampp\htdocs\project-simlog\system\Database\MigrationRunner.php(877): App\Database\Migrations\AddJenisBencanaPengeluaran->up()
+#6 C:\xampp\htdocs\project-simlog\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\project-simlog\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\project-simlog\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\project-simlog\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\project-simlog\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+INFO - 2023-12-10 10:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-10 10:53:28 --> mysqli_sql_exception: Unknown column 'tb_penerimaan.id_kategori' in 'on clause' in C:\xampp\htdocs\project-simlog\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\project-simlog\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `tb_pene...', 0)
+#1 C:\xampp\htdocs\project-simlog\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_pene...')
+#2 C:\xampp\htdocs\project-simlog\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_pene...')
+#3 C:\xampp\htdocs\project-simlog\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `tb_pene...', Array, false)
+#4 C:\xampp\htdocs\project-simlog\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\project-simlog\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\project-simlog\app\Controllers\PenerimaanLogistik.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\project-simlog\system\CodeIgniter.php(934): App\Controllers\PenerimaanLogistik->index()
+#8 C:\xampp\htdocs\project-simlog\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenerimaanLogistik))
+#9 C:\xampp\htdocs\project-simlog\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\project-simlog\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\project-simlog\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-12-10 10:53:28 --> Unknown column 'tb_penerimaan.id_kategori' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `tb_penerimaan`.*, `id_penerimaan`, `nama_barang` AS `id_barang`, `nama_kategori` AS `id_kategori`, `nama_satuan` AS `id_satuan`
+FROM `tb_penerimaan`
+JOIN `tb_barang` ON `tb_penerimaan`.`id_barang` = `tb_barang`.`id_barang`
+JOIN `tb_kategori` ON `tb_penerimaan`.`id_kategori` = `tb_kategori`.`id_kategori`
+JOIN `tb_satuan` ON `tb_penerimaan`.`id_satuan` = `tb_satuan`.`id_satuan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tb_penerimaan`.*, `id_penerimaan`, `nama_barang` AS `id_barang`, `nama_kategori` AS `id_kategori`, `nama_satuan` AS `id_satuan`
+FROM `tb_penerimaan`
+JOIN `tb_barang` ON `tb_penerimaan`.`id_barang` = `tb_barang`.`id_barang`
+JOIN `tb_kategori` ON `tb_penerimaan`.`id_kategori` = `tb_kategori`.`id_kategori`
+JOIN `tb_satuan` ON `tb_penerimaan`.`id_satuan` = `tb_satuan`.`id_satuan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tb_penerimaan`.*, `id_penerimaan`, `nama_barang` AS `id_barang`, `nama_kategori` AS `id_kategori`, `nama_satuan` AS `id_satuan`
+FROM `tb_penerimaan`
+JOIN `tb_barang` ON `tb_penerimaan`.`id_barang` = `tb_barang`.`id_barang`
+JOIN `tb_kategori` ON `tb_penerimaan`.`id_kategori` = `tb_kategori`.`id_kategori`
+JOIN `tb_satuan` ON `tb_penerimaan`.`id_satuan` = `tb_satuan`.`id_satuan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `tb_penerimaan`.*, `id_penerimaan`, `nama_barang` AS `id_barang`, `nama_kategori` AS `id_kategori`, `nama_satuan` AS `id_satuan`
+FROM `tb_penerimaan`
+JOIN `tb_barang` ON `tb_penerimaan`.`id_barang` = `tb_barang`.`id_barang`
+JOIN `tb_kategori` ON `tb_penerimaan`.`id_kategori` = `tb_kategori`.`id_kategori`
+JOIN `tb_satuan` ON `tb_penerimaan`.`id_satuan` = `tb_satuan`.`id_satuan`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\PenerimaanLogistik.php(35): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PenerimaanLogistik->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenerimaanLogistik))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-simlog\\public\\index.php')
+INFO - 2023-12-10 10:55:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-10 10:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
